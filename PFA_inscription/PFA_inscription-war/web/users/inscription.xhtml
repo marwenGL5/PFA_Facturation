@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="IdClient:" for="idClient" />
+                    <h:inputText id="idClient" value="#{clientMBean.selectedClient.idClient}" title="NomClient" required="true" requiredMessage="The NomClient field is required."
+                                 converter="javax.faces.Integer" />
+
+                    <h:outputLabel value="NomClient:" for="nomClient" />
+                    <h:inputText id="nomClient" value="#{clientMBean.selectedClient.nomClient}" title="NomClient" required="true" requiredMessage="The NomClient field is required."/>
+                    <h:outputLabel value="PrenomClient:" for="prenomClient" />
+                    <h:inputText id="prenomClient" value="#{clientMBean.selectedClient.prenomClient}" title="PrenomClient" required="true" requiredMessage="The PrenomClient field is required."/>
+                    <h:outputLabel value="AgeClient:" for="ageClient" />
+                    <h:inputText id="ageClient" value="#{clientMBean.selectedClient.ageClient}" title="AgeClient" required="true" requiredMessage="The AgeClient field is required." 
+                                 converter="javax.faces.Integer"/>
+                    <h:outputLabel value="AdresseClient:" for="adresseClient" />
+                    <h:inputText id="adresseClient" value="#{clientMBean.selectedClient.adresseClient}" title="AdresseClient" required="true" requiredMessage="The AdresseClient field is required."/>
+                    <h:outputLabel value="VilleClient:" for="villeClient" />
+                    <h:inputText id="villeClient" value="#{clientMBean.selectedClient.villeClient}" title="VilleClient" required="true" requiredMessage="The VilleClient field is required."/>
+                    <h:outputLabel value="CodePClient:" for="codePClient" />
+                    <h:inputText id="codePClient" value="#{clientMBean.selectedClient.codePClient}" title="CodePClient" required="true" requiredMessage="The CodePClient field is required."
+                                 converter="javax.faces.Integer" />
+                    <h:outputLabel value="EmailClient:" for="emailClient" />
+                    <h:inputText id="emailClient" value="#{clientMBean.selectedClient.emailClient}" title="EmailClient" required="true" requiredMessage="The EmailClient field is required."/>
+                    
+                    <h:outputLabel value="Username" for="username" />
+                    <h:inputText id="username" value="#{clientMBean.selectedUser.username}" title="EmailClient" required="true" requiredMessage="The EmailClient field is required."/>
+                    <h:outputLabel value="password" for="passwd" />
+                    <h:inputText id="passwd" value="#{clientMBean.selectedUser.passwd}" title="EmailClient" required="true" requiredMessage="The EmailClient field is required."/>
+                  
+                    <h:commandButton action="#{clientMBean.create()}" value="valider" />
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
